@@ -1,0 +1,13 @@
+<NotepadPlus>
+    <Project name="Creamery Website">
+        <Folder name="css">
+            <File name="css\normalize.css" />
+            <File name="css\skeleton.css" />
+        </Folder>
+        <Folder name="images">
+            <File name="images\favicon.png" />
+        </Folder>
+        <File name="index.html" />
+        <File name="Snippets.txt" />
+    </Project>
+</NotepadPlus>
