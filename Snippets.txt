@@ -94,3 +94,7 @@ MAIN CONTAINER
 				box-shadow: 0 8px 0px rgb(234,169,64);
 	}
 */
+
+							<div class="logo">
+								<img src="/images/CreameryLogo_V.png" alt="Co-op Creamery Cafe">
+							</div>
