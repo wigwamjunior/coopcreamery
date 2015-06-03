@@ -1,0 +1,447 @@
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #ea8a31;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ea8a31;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px "adobe-caslon-pro", "proxima-nova", Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin-left: 10%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+	background: url(/images/Creamery_Vintage2.jpg) top right no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 160px;
+}
+
+.footer-container,
+.main aside {
+    background: #CE7F2B; /* Copper */
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+ 
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul li {
+	display: block; /* Inline items can't have a height. Set to inline-block */ 
+	padding: 2% 0;
+	margin: 0;
+	line-height: 14px
+}
+
+nav a {
+    text-align: center;
+	font-family: proxima-nova; 
+	font-size: 18px;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	text-decoration: none;
+    font-weight: bold;
+
+    color: #830B14; /*Brick*/
+}
+
+nav a:hover,
+nav a:visited {
+    color: #830B14;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+	padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   	.logo {
+		position: relative;
+		float: left;
+		-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+			-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+				box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+		z-index: 2;
+	}
+   
+   .nav-bar {
+		background-color: #F9CD4E;
+		position: absolute;
+		top: 100%;
+		padding: 20px 0 20px 80px;
+		width: 100%;
+	}
+
+	.byline {
+		font-family: "proxima-nova";
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		padding-bottom: 20px;
+	}
+
+#byline span {
+	text-transform: none;
+	}
+	
+	
+	.hours-address {
+		padding-bottom: 20px;
+	}
+		
+		.hours-address  ul{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.hours-address  ul li{
+			display: block;
+		}
+		
+		.hours-address li:last-child{
+			padding-bottom: 10px;
+		}
+
+/* ==========================================================================
+   $Links
+   ========================================================================== */
+
+		
+		
+a, a:visited  {
+  color: #830B14;
+  text-decoration: none;
+  }
+	
+a:hover {
+  color: #830B14;
+  }
+  
+  
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+   .primary-nav {
+		float: left;
+	}
+	
+    nav li {
+        display: inline-block;
+        padding: 0 10px;
+        border-left: 2px solid #830B14;
+        }
+
+    nav li:first-child {
+        margin-left: 0;
+        padding-left: 0;
+        border: none;
+    }
+
+    nav li:last-child {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+	.header-container {
+
+	}
+	
+	.logo {
+		float: right;
+		margin-right: 90%;
+	}
+	
+	.hours-address {
+		float:right;
+		width: 50%;
+	}
+		
+		.hours-address  ul{
+			margin: 0;
+			padding: 0;
+		}
+		
+		.hours-address  ul li{
+			display: inline;
+		}
+	
+	
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+	
+	body {
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%), url(/images/pattern.png) top left repeat
+	}
+   
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
