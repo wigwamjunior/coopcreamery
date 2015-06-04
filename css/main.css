@@ -59,8 +59,7 @@ body {
 }
 
 .wrapper {
-    width: 90%;
-    margin-left: 10%;
+    margin-left:78px;
 }
 
 /* ===================
@@ -90,7 +89,11 @@ body {
 /* ==============
     MOBILE: Menu
    ============== */
- 
+
+nav {
+	float: left;
+}   
+   
 nav ul {
     margin: 0;
     padding: 0;
@@ -99,7 +102,6 @@ nav ul {
 
 nav ul li {
 	display: block; /* Inline items can't have a height. Set to inline-block */ 
-	padding: 2% 0;
 	margin: 0;
 	line-height: 14px
 }
@@ -124,33 +126,6 @@ nav a:visited {
 nav a:hover {
     text-decoration: none;
 }
-
-.social {
-	padding-top: 10px;
-	}
-
-	.social ul {
-		margin: 0;
-		width: 100%;
-		}
-	
-	.social ul li {
-		display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
-		padding-left: 6px;
-		border: none;
-		margin: 0;
-		line-height: 14px;
-		}
-		
-		.social ul li:first-child {
-		padding: 0;
-		}
-	
-	.social img {
-		height: 20px;
-		}
-
-
 
 
 /* ==============
@@ -199,7 +174,7 @@ nav a:hover {
 	}
 	
 
-   /*.header-img {
+    /*.header-img {
 		background: url(/images/Creamery_Vintage2.jpg) top right no-repeat;
 		background-size: cover;
 		height: 100%;
@@ -207,20 +182,20 @@ nav a:hover {
    
    .nav-container {
 		position: absolute;
-		bottom: 0;
 		width: 100%;
+		bottom: 0;
 		background-color: rgba(249, 205, 78, 0.85); /*#F9CD4E; /* Gold */
+		padding-top: 20px;
+		overflow: hidden;
 	}
    
-   .nav {
-		padding: 20px 20px 20px 78px;
-	}
-
-	.byline {
+   	.byline {
+		width: 100%;
+		float: left;
 		font-family: "proxima-nova";
-		font-size: 12px;
+		font-size: 14px;
 		font-weight: bold;
-		line-height: 16px;
+		line-height: 17px;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 		padding-bottom: 20px;
@@ -229,30 +204,67 @@ nav a:hover {
 		.byline span {
 			text-transform: none;
 			}
+			
+	.hours-address {
+		float: left;
+		display: block;
+		font-family: "adobe-caslon-pro";
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 17px;
+		padding-bottom: 20px;
+	}
 	
-	
-		.hours-address  ul{
+		.hours-address ul{
 			margin: 0;
 			padding: 0;
 		}
 		
-		.hours-address  ul li{
+		.hours-address ul li{
+			margin: 0;
+			padding: 0;
 			display: block;
-			font-size: 16px;
-			font-weight: bold;
-			line-height: 20px;
+			list-style-type: none;
 		}
 		
-		.hours-address  li:nth-child(2){
+		.hours-address ul li:nth-child(2){
 			padding-bottom: 20px;
 		}
-
-
-/* ==========================================================================
-   $Links
-   ========================================================================== */
-
+	
+	.primary-nav {
+		padding-bottom: 20px;
+		width: 100%;
+		float: left;
 		
+	}
+
+	.social {
+		float: left;
+	}
+
+		.social ul {
+			margin: 0;
+			padding: 0;
+			}
+		
+		.social ul li {
+			display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
+			padding-left: 6px;
+			}
+			
+			.social ul li:first-child {
+				padding-left: 0px;
+			}
+		
+			.social img {
+				height: 20px;
+				}
+		
+		
+/* ====================
+   $Links
+   ==================== */
+
 		
 a, a:visited  {
   color: #830B14;
@@ -264,16 +276,16 @@ a:hover {
   }
   
   
-/* ==========================================================================
+/* ====================
    Media Queries
-   ========================================================================== */
+   ==================== */
 
 @media only screen and (min-width: 480px) {
 
-/* ===============================
+/* ========================================================================
     $480 Small Screen & Landscape
-   =============================== */
-
+   ======================================================================== */
+   
     nav ul li {
         display: inline-block;
         padding-left: 10px;
@@ -286,11 +298,18 @@ a:hover {
     nav li:last-child {
         margin-right: 0;
     }
+	
+	main-container {
+		background:	linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 90%, rgba(255,255,255,1) 100%), url(/images/pattern.png) top left repeat;
+	}
 
-/* ========================
+/* ========================================================================
     IE Fixes
-   ======================== */
-
+   ======================================================================== */
+	.header-container {
+		height: 406px;
+	}
+   
     nav ul li {
         display: inline;
     }
@@ -300,72 +319,53 @@ a:hover {
     }
 }
 
-/* ========================
+/* ========================================================================
     $768 Large Screen
-   ======================== */
+   ======================================================================== */
 
 @media only screen and (min-width: 768px) {
 
-	.header-container {
+	.wrapper {
+		margin-left: 15%;
+		width: 90%;
+	}
 
+	.header-container {
+		height: 406px;
 	}
 	
 	.logo {
-		margin-left: 36px;
+		margin-left: 5%;
 	}
 	
-	.nav {
-		margin: 0;
-		padding: 20px 20px 20px 114px;
+	.nav-container {
+		width: 100%;
 	}
-
+	
 	.byline {
-		display: inline-block;
+		width: auto;
 	}
 	
 	.hours-address {
 		float: right;
 	}
 	
-		.hours-address  ul li{
+		.hours-address ul li{
 			display: inline-block;
 		}
 		
-		.hours-address  li:nth-child(2){
-			padding: 0px;
-			padding-left: 5px;
-			border-left: 1px solid black;
+		.hours-address ul li:nth-child(2) {
+			padding-bottom: 4px;
 		}
-
-	.primary-nav {
-		padding-top: 20px;
-	}
 	
+	.primary-nav {
+		width: auto;
+		padding-bottom: 10px;
+	}
 	
 	.social {
-		padding-top: 10px;
+		float: right;
 	}
-
-	.social ul {
-		margin: 0;
-		width: 100%;
-		}
-	
-	.social ul li {
-		display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
-		padding-left: 6px;
-		border: none;
-		margin: 0;
-		line-height: 14px;
-		}
-		
-		.social ul li:first-child {
-		padding: 0;
-		}
-	
-	.social img {
-		height: 20px;
-		}
 	
 /* ====================
     WIDE: CSS3 Effects
