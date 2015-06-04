@@ -166,6 +166,7 @@ nav a:hover {
 	.logo {
 		position: absolute;
 		top: 0;
+		margin-left:-78px; /*move logo left to allow wrappers to line up */
 		-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
 			-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
 				box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
@@ -287,7 +288,6 @@ a:hover {
 	.header-img {
 		background: url(/images/Creamery_Vintage2.jpg) top right no-repeat; /*Remove this for mobile*/
 		background-size: cover;
-		border-bottom: 6px solid #eaa940; /*Orange*/
 		height: 360px;
 	}
 
@@ -342,6 +342,14 @@ a:hover {
 	
 	.social {
 		float: right;
+	}
+	
+	.slideshow {
+		position:relative;
+		width: 100%;
+		margin-top:-120px;
+		margin-bottom: 20px;
+		border: 6px solid white; /*Orange*/
 	}
 	
 	.main-container {
