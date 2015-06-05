@@ -3,6 +3,12 @@
         <Folder name="css">
             <File name="css\normalize.css" />
             <File name="css\skeleton.css" />
+            <File name="css\main.css" />
+            <File name="css\normalize.css" />
+            <File name="css\normalize.min.css" />
+            <File name="css\skeleton.css" />
+            <File name="css\skeletonBACK.css" />
+            <File name="css\skeleton_BACK.css" />
         </Folder>
         <Folder name="images">
             <File name="images\favicon.png" />

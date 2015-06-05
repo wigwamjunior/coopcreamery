@@ -50,10 +50,6 @@ textarea {
 }
 
 
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
 body {
     font: 16px/26px "adobe-caslon-pro", "proxima-nova", Arial;
 }
@@ -62,14 +58,19 @@ body {
     ALL: 
    =================== */
 
+.main-wrapper {
+	background: #FFF;
+	}
 
-
-.footer-container {
-	background: #F9CD4E; /* Gold */
-	border-top: 4px solid #EAA940; /* Burnt */
+.main-content article h1 {
+    font-size: 3em;
 }
 
-.main aside {
+.main-content aside {
+    color: white;
+}
+
+.main-content aside {
     background: #830B14; /* Brick */
 }
 
@@ -77,12 +78,20 @@ body {
     color: white;
 }
 
-.wrapper {
-	margin-left: 78px;
+.footer-wrapper {
+	padding-top: 20px;
+	background: #F9CD4E; /* Gold */
+	border-top: 4px solid #EAA940; /* Burnt */
+}
+
+.footer-content {
+	color: white;
+	margin: 0px;
+	padding-top: 20px;
 }
 
 /* ==============
-    MOBILE: Menu
+    Navigation
    ============== */
 
 nav {
@@ -123,140 +132,120 @@ nav a:hover {
 }
 
 
-/* ==============
-    MOBILE: Main
-   ============== */
 
-.main {
-	padding: 30px 0;
+.header-wrapper {
+	width: 100%;
+	padding: 20px 0px 10px 0px;
+	background-color: #F9CD4E; /* Gold */
+	border-bottom: 4px solid #EAA940; /* Burnt */
 }
 
-.main article h1 {
-    font-size: 2em;
+.header-content {
+	margin-left: 64px; /*Set the padding to the width of the logo + 20px */
 }
 
-.main aside {
-    color: white;
+.logo {
+	position: relative;
+	display: block;
+	height: 348.966px;
+	width: 44px;
+	bottom: 0px;
+	margin-bottom: -348.966px;
+	margin-left: 0px;
+	background: url(/images/logo.svg);
+	background-size: contain;
+	text-indent: -9999px;
+
+	-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+}
+   
+.byline {
+	float: left;
+	clear: both;
+	font-family: "proxima-nova";
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 17px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	padding-bottom: 20px;
 }
 
-.footer-container footer {
-    color: white;
-    padding: 20px 0 20px 78px;
+	.byline span {
+		text-transform: none;
+		}
+
+.hours-address {
+	float: left;
+	clear: both;
+	display: block;
+	font-family: "adobe-caslon-pro";
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	line-height: 17px;
+	padding-bottom: 20px;
 }
 
-/* ===============
-    ALL: IE Fixes
-   =============== */
+	.hours-address ul{
+		margin: 0;
+		padding: 0;
+	}
+	
+	.hours-address ul li{
+		margin: 0;
+		padding: 0;
+		display: block;
+		list-style-type: none;
+	}
+	
+	.hours-address ul li:nth-child(2){
+		padding-bottom: 20px;
+	}
+
+.primary-nav {
+	clear: both;
+}
+
+.social {
+	float: left;
+	clear: both;
+	padding-top: 10px;
+}
+
+	.social ul {
+		margin: 0;
+		padding: 0;
+		}
+	
+	.social ul li {
+		display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
+		padding-left: 6px;
+		}
+		
+		.social ul li:first-child {
+			padding-left: 0px;
+		}
+	
+		.social img {
+			height: 20px;
+			}
+
+
+.slideshow {
+	/* Inject background image in HTML */
+	background-size: cover;	
+	background-position: left center;
+	height: 360px;
+	clear: both;
+	border-bottom: 4px solid #EAA940; /* Burnt */
+}
 
 .ie7 .title {
-    padding-top: 20px;
+padding-top: 20px;
 }
-
-/* ==========================================================================
-   $Author's custom styles
-   ========================================================================== */
-
-   .nav-wrapper {
-		width: 100%;
-		padding: 20px 0px 10px 0px;
-		background-color: #F9CD4E; /* Gold */
-		border-bottom: 4px solid #EAA940; /* Burnt */
-	}
-	
-	.logo {
-		  height: 460px;
-		  width: 58px;
-		  bottom: 0px;
-		  margin-bottom: -524px;
-		  margin-left: 0px;
-		  position: relative;
-		  float: left;
-		  -webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
-			-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
-				box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
-	}
-	   
-   	.byline {
-		float: left;
-		clear: both;
-		font-family: "proxima-nova";
-		font-size: 14px;
-		font-weight: bold;
-		line-height: 17px;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		padding-bottom: 20px;
-	}
-
-		.byline span {
-			text-transform: none;
-			}
-
-	.hours-address {
-		float: left;
-		clear: both;
-		display: block;
-		font-family: "adobe-caslon-pro";
-		font-size: 16px;
-		font-weight: bold;
-		text-align: left;
-		line-height: 17px;
-		padding-bottom: 20px;
-	}
-	
-		.hours-address ul{
-			margin: 0;
-			padding: 0;
-		}
-		
-		.hours-address ul li{
-			margin: 0;
-			padding: 0;
-			display: block;
-			list-style-type: none;
-		}
-		
-		.hours-address ul li:nth-child(2){
-			padding-bottom: 20px;
-		}
-	
-	.primary-nav {
-		clear: both;
-	}
-
-	.social {
-		float: left;
-		clear: both;
-		padding-top: 10px;
-	}
-
-		.social ul {
-			margin: 0;
-			padding: 0;
-			}
-		
-		.social ul li {
-			display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
-			padding-left: 6px;
-			}
-			
-			.social ul li:first-child {
-				padding-left: 0px;
-			}
-		
-			.social img {
-				height: 20px;
-				}
-	
-
-	.slideshow {
-		/* Inject background image in HTML */
-		background-size: cover;	
-		background-position: left center;
-		height: 360px;
-		clear: both;
-	}
-	
 /* ====================
    $Links
    ==================== */
@@ -282,13 +271,17 @@ a:hover {
     $480 Small Screen & Landscape
    ======================================================================== */
 
-   .wrapper{
-		margin: 0 5%;
-		padding-left: 78px;
+   .header-content{
+		margin-left: 5%;
+		padding-left: 94px; /*Set the padding to the width of the logo + 30px */
+		padding-right: 2%;
 	}
    
 	.logo {
 		margin-left: 5%;
+		height: 507.586px;
+		width: 64px;
+		margin-bottom: -507.586px;
 	}
 	
     nav a {
@@ -311,6 +304,12 @@ a:hover {
     .oldie nav a {
         margin: 0 0.7%;
     }
+
+	.main-content, .footer-content{
+		margin: 0px 5%;
+		padding: 40px 0px 0px 94px; /*Set the padding to the width of the logo + 30px */
+	}
+	
 }
 
 /* ========================================================================
@@ -319,6 +318,17 @@ a:hover {
 
 @media only screen and (min-width: 768px) {
 
+	.header-content{
+		padding-left: 103px; /*Set the padding to the width of the logo + 30px */
+	}
+	   
+	.logo {
+		margin-left: 5%;
+		height: 578.966px;
+		width: 73px;
+		margin-bottom: -578.966px;
+	}
+	
 	.byline {
 		width: auto;
 		clear: none;
@@ -347,8 +357,13 @@ a:hover {
 		float: right;
 		padding-top: 0px;
 	}
+	.main-wrapper {
+		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%), url(/images/pattern.png) top left repeat;
+	}
 	
-
+	.main-content, .footer-content {
+		padding-left: 103px; /*Set the padding to the width of the logo + 30px */
+	}
 	
 /* ====================
     WIDE: CSS3 Effects
@@ -369,17 +384,17 @@ a:hover {
     WIDE: Main
    ============ */
 
-    .main article {
+    .main-content article {
         float: left;
         width: 57%;
     }
 
-    .main aside {
+    .main-content aside {
         float: right;
         width: 28%;
     }
 	
-	.main img {
+	.main-content img {
 		width: 100%
 	}
 }
@@ -391,12 +406,13 @@ a:hover {
    =============== */
 	
 	body {
-		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%), url(/images/pattern.png) top left repeat
+		
 	}
    
-    .wrapper {
-        width: 960px; /* 1140px - 10% for margins */
-    }
+   .header-content, .main-content, .footer-content {
+		max-width: 1040px;
+   }
+   
 }
 
 /* ==========================================================================
@@ -413,6 +429,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 300;
   text-transform: uppercase;
+  color: #CE7F2B; /* Orange */
 }
   
 h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
