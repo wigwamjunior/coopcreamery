@@ -52,25 +52,60 @@ textarea {
 
 body {
     font: 16px/26px "adobe-caslon-pro", "proxima-nova", Arial;
+	
 }
 
 /* ===================
     ALL: 
    =================== */
+   
+.wrapper-page {
+	position: relative;
+	max-width: 1100px;
+	margin: 0px;
+	background-color: #fff;
+}
 
-.main-wrapper {
-	background: #FFF;
-	}
+.wrapper-header {
+	padding: 20px 20px 10px 64px; /* Move right of logo 20px */
+	background-color: #F9CD4E; /* Gold */
+	border-bottom: 4px solid #EAA940; /* Burnt */
+}
 
-.main-container article h1 {
+.logo {
+	display: block;
+	position: absolute;
+	top: 0px;	
+	height: 348.966px;
+	width: 44px;
+	left: 0px;
+	background: url(/images/logo.svg);
+	background-size: contain;
+	text-indent: -9999px;
+	-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper-body {
+	padding: 20px
+}
+
+.wrapper-footer {
+	position: relative;
+	background: #F9CD4E; /* Gold */
+	border-top: 4px solid #EAA940; /* Burnt */
+}
+
+.main article h1 {
     font-size: 3em;
 }
 
-.main-container aside {
+.main aside {
     color: white;
 }
 
-.main-container aside {
+.main aside {
     background: #830B14; /* Brick */
 }
 
@@ -78,25 +113,24 @@ body {
     color: white;
 }
 
-.footer-wrapper {
-	background: #F9CD4E; /* Gold */
-	border-top: 4px solid #EAA940; /* Burnt */
+.footer-copyright {
+	padding-bottom: 20px;
+	float: left;
+	padding-top: 90px;
+	clear: left;
 }
 
-.footer-container {
-	color: white;
-	margin: 0px;
-	padding-top: 20px;
-}
-
-.sub-footer-wrapper {
-	background: #EAA940; /* Burnt */
+.footer-logo {
+	float: left;
 }
 
 .copyright {
 	float: left;
+	padding-left: 20px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 15px;
 }
-
 
 /* ==============
     Navigation
@@ -119,14 +153,13 @@ nav ul li {
 }
 
 nav a {
-    text-align: center;
+    text-align: left;
 	font-family: proxima-nova; 
 	font-size: 18px;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	text-decoration: none;
     font-weight: bold;
-
     color: #830B14; /*Brick*/
 }
 
@@ -139,63 +172,61 @@ nav a:hover {
     text-decoration: none;
 }
 
-.footer-top-nav {
+.contact, .phone {
+	display: inline-block;
+	font-family: 'proxima-nova';
+	line-height: 20px;
+	text-transform: uppercase;
+	position: relative;
 	float: left;
 }
 
-.footer-second-nav {
-	float: left;
-	clear: left;
+.phone {
+	margin: 0px 14px;
+	padding: 0px 0px;
+	}
+
+.contact:after {
+	content: "";
+	border-right: 1px solid #000;
+	position: absolute;
+	height: 50%;
+	top: 25%;
+	right: -6px;
 }
 
-.footer-details {
+.footer-address {
+	line-height: 20px;
+	position: relative;
+}
+
+.footer-primary, .footer-secondary, .footer-details {
+	padding-left: 20px;
+}
+
+.footer-primary a{
+	font-size: 16px;
+}
+
+.footer-secondary a{
+	font-size: 13px;
+}
+
+.footer-primary ul li, .footer-secondary  ul li{
+	display: inline-block;
+	padding-left: 4px;
+}
+	
+	.footer-primary li:first-child, .footer-secondary li:first-child{
+		padding-left: 0px;
+	}
+
+.details {
 	float: left;
 	padding-top: 20px;
 }
 
-.footer-details ul {
-	margin: 0px;
-	padding: 0px;
-}
 
-.footer-details ul li{
-	display: inline;
-	margin: 0px;
-}
-
-.sub-footer {
-	background-color: #EAA940; /* Gold */
-	clear:both;
-}
-
-.header-wrapper {
-	width: 100%;
-	padding: 20px 0px 10px 0px;
-	background-color: #F9CD4E; /* Gold */
-	border-bottom: 4px solid #EAA940; /* Burnt */
-}
-
-.header-container {
-	margin-left: 64px; /*Set the padding to the width of the logo + 20px */
-}
-
-.logo {
-	position: relative;
-	display: block;
-	height: 348.966px;
-	width: 44px;
-	bottom: 0px;
-	margin-bottom: -348.966px;
-	margin-left: 0px;
-	background: url(/images/logo.svg);
-	background-size: contain;
-	text-indent: -9999px;
-
-	-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
-		-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
-			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
-}
-   
 .byline {
 	float: left;
 	clear: both;
@@ -210,7 +241,7 @@ nav a:hover {
 
 	.byline span {
 		text-transform: none;
-		}
+	}
 
 .hours-address {
 	float: left;
@@ -266,7 +297,7 @@ nav a:hover {
 	
 		.social img {
 			height: 20px;
-			}
+		}
 
 
 .slideshow {
@@ -274,7 +305,6 @@ nav a:hover {
 	background-size: cover;	
 	background-position: left center;
 	height: 360px;
-	clear: both;
 	border-bottom: 4px solid #EAA940; /* Burnt */
 }
 
@@ -284,24 +314,16 @@ padding-top: 20px;
 
 .footer-nav {
 	float: left;
-}
-.left {
-	float: left;
-	}
-	
-.map-canvas {
-	float: right;
-	height: 260px;
+	clear: left;
+	padding-top: 20px;
 }
 
-.sub-footer {
-}
 
 /* ====================
    $Links
    ==================== */
 
-		
+
 a, a:visited  {
   color: #830B14;
   text-decoration: none;
@@ -322,17 +344,31 @@ a:hover {
     $480 Small Screen & Landscape
    ======================================================================== */
 
-   .header-container{
-		margin-left: 5%;
-		padding-left: 94px; /*Set the padding to the width of the logo + 30px */
-		padding-right: 2%;
+	body {
+		background: url(/images/pattern.png) top left rgb(62,61,70); /* Initiate pattern */
+	}
+
+   .wrapper-page {
+		margin: 0px 5% 0px 10%; /* Initiate margin */
+		box-shadow:
+			0 0 4px rgb(22,21,20),
+			10px 0 50px 50px rgb(62,61,70); /* Initiate shadow */
+	}
+	
+	.wrapper-header, .wrapper-body, .wrapper-footer, .sub-footer {
+		padding-right: 20px;
+		padding-left: 48.25px; /* Move right amount logo overlaps left + 30px */
 	}
    
+	.wrapper-body {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	
 	.logo {
-		margin-left: 5%;
 		height: 507.586px;
 		width: 64px;
-		margin-bottom: -507.586px;
+		left: -48px; /* move 3/4 logo width to the left */
 	}
 	
     nav a {
@@ -341,7 +377,7 @@ a:hover {
     }
 
 	nav ul li {
-        display: inline;
+        display: inline-block;
     }
 	
     nav li:first-child a {
@@ -356,22 +392,13 @@ a:hover {
         margin: 0 0.7%;
     }
 
-	.main-container, .footer-container, .sub-footer-container {
-		margin: 0px 5%;
-		padding: 40px 0px 0px 94px; /*Set the padding to the width of the logo + 30px */
+	.map-canvas {
+		float: right;
+		margin-right: -20px;
 	}
 	
-		.footer-container{
-			padding-top: 0px; /*Set the padding to the width of the logo + 30px */
-		}
-	
-		.sub-footer-container {
-			padding-top: 10px
-			padding-bottom: 10px;
-		}
-	
-	.map-canvas {
-
+	.footer-primary, .footer-secondary, .footer-details {
+	padding-left: 0px;
 	}
 }
 
@@ -381,15 +408,15 @@ a:hover {
 
 @media only screen and (min-width: 768px) {
 
-	.header-container{
-		padding-left: 103px; /*Set the padding to the width of the logo + 30px */
+	
+	.wrapper-header, .wrapper-body, .wrapper-footer {
+		padding-left: 48.25px; /* Move right amount logo overlaps left + 30px */
 	}
-	   
+	
 	.logo {
-		margin-left: 5%;
 		height: 578.966px;
 		width: 73px;
-		margin-bottom: -578.966px;
+		left: -54.75px;  /* move 3/4 logo width to the left */
 	}
 	
 	.byline {
@@ -420,14 +447,33 @@ a:hover {
 		float: right;
 		padding-top: 0px;
 	}
-	.main-wrapper {
-		background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 70%, rgba(255,255,255,0) 100%), url(/images/pattern.png) top left repeat;
+	
+	.contact:after {
+		content: "";
+		border-right: 1px solid #000;
+		position: absolute;
+		height: 50%;
+		top: 25%;
+		right: -8px;
+	}
+
+	.phone:after {
+		content: "";
+		border-right: 1px solid #000;
+		position: absolute;
+		height: 50%;
+		top: 25%;
+		right: -8px;
 	}
 	
-	.main-container, .footer-container, .sub-footer-container {
-		padding-left: 103px; /*Set the padding to the width of the logo + 30px */
+	.footer-address{
+	display: inline-block;
 	}
 	
+	.footer-address div{
+	display: inline-block;
+	}
+		
 /* ====================
     WIDE: CSS3 Effects
    ==================== */
@@ -447,17 +493,17 @@ a:hover {
     WIDE: Main
    ============ */
 
-    .main-container article {
+    .main article {
         float: left;
         width: 57%;
     }
 
-    .main-container aside {
+    .main aside {
         float: right;
         width: 28%;
     }
 	
-	.main-container img {
+	.main img {
 		width: 100%
 	}
 }
@@ -472,7 +518,7 @@ a:hover {
 		
 	}
    
-   .header-container, .main-container, .footer-container {
+   .header-wrapper, .wrapper-body{
 		max-width: 1280px;
    }
    
