@@ -59,12 +59,7 @@ body {
     ALL: 
    =================== */
    
-.wrapper-page {
-	position: relative;
-	max-width: 1100px;
-	margin: 0px;
-	background-color: #fff;
-}
+
 
 .wrapper-header {
 	padding: 20px 20px 10px 64px; /* Move right of logo 20px */
@@ -95,6 +90,7 @@ body {
 	position: relative;
 	background: #F9CD4E; /* Gold */
 	border-top: 4px solid #EAA940; /* Burnt */
+	padding: 10px 0px 0px 10px;
 }
 
 .main article h1 {
@@ -114,22 +110,26 @@ body {
 }
 
 .footer-copyright {
-	padding-bottom: 20px;
-	float: left;
-	padding-top: 90px;
-	clear: left;
+	margin-left: -48.25px;
+	margin-right: -20px;
+	padding: 4px 0px;
+	background-color: #EAA940;
+	clear: both;
 }
 
 .footer-logo {
 	float: left;
+	margin-left: 48.25px;
+	margin-right: 20px;
 }
 
 .copyright {
 	float: left;
-	padding-left: 20px;
+	margin-left: 48.25px;
 	color: #fff;
 	font-size: 12px;
 	line-height: 15px;
+	margin-top: 18px;
 }
 
 /* ==============
@@ -174,8 +174,10 @@ nav a:hover {
 
 .contact, .phone {
 	display: inline-block;
+	text-align: center;
 	font-family: 'proxima-nova';
 	line-height: 20px;
+	font-size: 13px;
 	text-transform: uppercase;
 	position: relative;
 	float: left;
@@ -197,11 +199,40 @@ nav a:hover {
 
 .footer-address {
 	line-height: 20px;
+	font-size: 13px;
 	position: relative;
+	display: inline-block;
+	padding-bottom: 30px;
+}
+
+	.footer-address div{
+		display: inline-block;
+	}
+
+.map-canvas {
+	position: relative;
+	margin-left: -10px;
+	height: 260px;
+	background: url(/images/creamery-map.png) center center no-repeat;
+	background-size: cover;
+}
+	
+.marker{
+	position: absolute;
+	height: 48px;
+	width: 48px;
+	background: url(/images/marker.png) top left no-repeat;
+	background-size: 48px 48px;
+	left: 48px;
+	top: 50%;
 }
 
 .footer-primary, .footer-secondary, .footer-details {
 	padding-left: 20px;
+}
+
+.footer-details {
+	float: left;
 }
 
 .footer-primary a{
@@ -338,23 +369,12 @@ a:hover {
    Media Queries
    ==================== */
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 600px) {
 
 /* ========================================================================
-    $480 Small Screen & Landscape
+    $600 Small Screen & Landscape
    ======================================================================== */
 
-	body {
-		background: url(/images/pattern.png) top left rgb(62,61,70); /* Initiate pattern */
-	}
-
-   .wrapper-page {
-		margin: 0px 5% 0px 10%; /* Initiate margin */
-		box-shadow:
-			0 0 4px rgb(22,21,20),
-			10px 0 50px 50px rgb(62,61,70); /* Initiate shadow */
-	}
-	
 	.wrapper-header, .wrapper-body, .wrapper-footer, .sub-footer {
 		padding-right: 20px;
 		padding-left: 48.25px; /* Move right amount logo overlaps left + 30px */
@@ -393,12 +413,24 @@ a:hover {
     }
 
 	.map-canvas {
+		position: relative;
 		float: right;
-		margin-right: -20px;
+		margin: -10px -20px 0px 0px;
+		height: 260px;
+		width: 600px;
+		background: url(/images/creamery-map.png) center center no-repeat;
+		background-size: cover;
+		
+	}
+	
+	.marker {
+		position: absolute;
+		left: 50%;
+		top: 50%;
 	}
 	
 	.footer-primary, .footer-secondary, .footer-details {
-	padding-left: 0px;
+		padding-left: 0px;
 	}
 }
 
@@ -408,9 +440,23 @@ a:hover {
 
 @media only screen and (min-width: 768px) {
 
-	
-	.wrapper-header, .wrapper-body, .wrapper-footer {
-		padding-left: 48.25px; /* Move right amount logo overlaps left + 30px */
+	body {
+		background: url(/images/pattern.png) top left rgb(62,61,70); /* Initiate pattern */
+	}
+
+	.wrapper {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	.wrapper-content {
+		position: relative;
+		max-width: 1020px;
+		margin-left: 18.75px;
+		background-color: #fff;
+		box-shadow:
+			0 0 4px rgb(22,21,20),
+			10px 0 50px 50px rgb(62,61,70); /* Initiate shadow */
 	}
 	
 	.logo {
