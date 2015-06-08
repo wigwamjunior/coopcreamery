@@ -22,50 +22,31 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 	
-	<div class="wrapper">
-		<div class="wrapper-content">
-			<header class="wrapper-header clearfix">
-				<a href="/" class="logo">Co-op Creamery Cafe</a>
+	<div class="page-wrapper">
+		<div class="content-wrapper">
+			<header class="header-wrapper clearfix">
+				<a href="/" class="logo"><img src="/images/logo.svg">Co-op Creamery Cafe</a>
 				<div class="byline">
 					A Neighborhood Cafe <span>by</span><br>
 					<a href="/">Seward Community Co-op</a>
 				</div>
-				<div class="hours-address">
-					<div>
-						<ul>
-							<li>Mon.-Fri.: 7 a.m. – 10 p.m. &</li>
-							<li>Sat.-Sun.: 8 a.m. – 10 p.m.</li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<a href="/">
-							<li>2601 E. Franklin Ave.</li>
-							<li>Minneapolis, MN 55406</li>
-							</a>
-						</ul>
-					</div>
-				</div>
-				<div class="primary-nav">
-					<nav>
-						<ul>
-							<li><a href="#">Menu</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Ownership</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="social">
+				<nav class="top-nav">
+					<div class="top-contact"><a href="/">Contact</a></div>
+					<div><a href="/"><img src="/images/creamery_twitter.png" alt="Twitter"/></a></div>
+					<div><a href="/"><img src="/images/creamery_facebook.png" alt="Facebook"/></a></div>
+				</nav>
+				<nav class="main-nav">
 					<ul>
-						<li><a href="/"><img src="/images/creamery_twitter.png" alt="Twitter"/></a></li>
-						<li><a href="/"><img src="/images/creamery_facebook.png" alt="Facebook"/></a></li>
+						<li><a href="#">Menu</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="#">Ownership</a></li>
 					</ul>
-				</div>
+				</nav>
 			</header>
 			
 			<div class="slideshow" style="background-image: url('/images/dinner_stock.jpg')";></div> 
 			
-			<div class="wrapper-body">
+			<div class="main-wrapper">
 				<div class="main clearfix">
 					<article>
 						<header>
@@ -82,42 +63,46 @@
 				</div>
 			</div>
 			
-			<footer class="wrapper-footer clearfix">
-					
-					<div class="contact"><a href="/">Contact Us</a></div>
-					<div class="phone">612-555-5855</div>			
-					<div class="footer-address">
-						<div>2601 E. Franklin Ave.</div>
-						<div>Minneapolis, MN 55406</div>
+			<footer class="footer-details clearfix">
+				<div class="footer-content">
+					<div class="one-column">
+						<div class="bottom-contact"><a href="/">Contact</a>
+						612-555-5855</div>			
+						<div class="address">
+							2601 E. Franklin Ave.<br>
+							Minneapolis, MN 55406
+						</div>
+						<div class="hours"><span>Hours</span>
+							Mon.-Fri.: 7 a.m. – 10 p.m.<br>
+							Sat.-Sun.: 8 a.m. – 10 p.m.</div>
 					</div>
-				
-				<div class="map-canvas">
-					<a href="/"><img class="marker" src="/images/pointer.svg" alt="Map"></a>
-				</div>
-				<div class="footer-nav">
-					<div class="footer-primary">
-						<nav>
-							<ul>
-								<li><a href="#">Menu</a></li>
-								<li><a href="#">About</a></li>
-								<li><a href="#">Ownership</a></li>
-							</ul>
-						</nav>
-					</div>
-					<div class="footer-secondary">
-						<nav>
-							<ul>
-								<li><a href="#">Employment</a></li>
-								<li><a href="#">Other</a></li>
-								<li><a href="#">Other</a></li>
-							</ul>
-						</nav>
+					<div class="one-column map-canvas">
+						
+							<a href="/"><img class="marker" src="/images/pointer.svg" alt="Map"></a>
+						
 					</div>
 				</div>
-				<div class="footer-copyright clearfix">
-					<img class="footer-logo" src="/images/SewardCoop.png">				
-					<div class="copyright">Copyright ©2015 Co-op Creamery Cafe. All rights reserved.<div>
-				</div>
+			</footer>
+			<footer class="footer-nav">
+					<nav class="footer-main-nav">
+						<ul>
+							<li><a href="#">Menu</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Ownership</a></li>
+						</ul>
+					</nav>
+					<nav class="footer-second-nav">
+						<ul>
+							<li><a href="#">Employment</a></li>
+							<li><a href="#">Other</a></li>
+							<li><a href="#">Other</a></li>
+						</ul>
+					</nav>
+			</footer>
+			<footer class="footer-copyright clearfix">
+
+					<div class="copyright one-column">Copyright ©2015 Co-op Creamery Cafe. All rights reserved.</div>
+					<div class="one-column"><img class="footer-logo" src="/images/SewardCoop.png"></div>
 			</footer>
 		</div>
 	</div>

@@ -11,3 +11,39 @@
 		padding-right: 4px;
 		border: none;
 	}
+	
+	
+				<div class="hours-address">
+					<div>
+						<ul>
+							<li>Mon.-Fri.: 7 a.m. – 10 p.m. &</li>
+							<li>Sat.-Sun.: 8 a.m. – 10 p.m.</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<a href="/">
+							<li>2601 E. Franklin Ave.</li>
+							<li>Minneapolis, MN 55406</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				
+				
+				<a href="/" class="logo">Co-op Creamery Cafe</a>
+				
+					display: block;
+	position: absolute;
+	width: 100%;
+	background-image: url(/images/logo.svg);
+	background-size: contain;
+	height: 0;
+	padding: 0; /* reset */
+	padding-bottom: 92%;
+	text-indent: -9999px;
+	-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+		-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+			box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
+			
+			font-size: 14px; font-size: 1.4rem;
