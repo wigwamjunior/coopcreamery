@@ -6,7 +6,8 @@ html {
 
 body {
     font-size: 16px; font-size: 1.6rem;
-	line-height: 1.6;
+	letter-spacing: 0.07em;
+	line-height: 1.5;
 	font-weight: 400;
 	font-family: "adobe-caslon-pro", "proxima-nova", Arial, sans-serif;
 }
@@ -64,27 +65,40 @@ textarea {
    =================== */
    
 .content-wrapper {
-		position: relative;
-		max-width: 1100px;
-		margin-left: 0px;
-		background-color: #fff;
+	position: relative;
+	max-width: 1100px;
+	margin-left: 0px;
+	background-color: #fff;
 	}
 
+.header-wrapper, .main-wrapper, .first-footer-wrapper, .second-footer-wrapper{
+	padding-left: 50px; /* width of logo + 16px */
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
 .header-wrapper {
-	padding: 20px 20px 10px 64px; /* Move right of logo 20px */
 	background-color: #F9CD4E; /* Gold */
 	border-bottom: 4px solid #EAA940; /* Burnt */
 }
 
+.first-footer-wrapper{
+	background-color: #F9CD4E; /* Gold */
+	border-top: 4px solid #EAA940; /* Burnt */
+	padding: 0px; /* Reset to keep map against right */
+}
+
+.second-footer-wrapper{
+	background-color: #EAA940; /* Gold */
+	padding: 20px; 
+}
+	
 .logo {
-	display: block;
 	position: absolute;
-	top: 0px;	
-	height: 348.966px;
-	width: 44px;
-	left: 0px;
+	top: 0;
+	left: 0;	
+	width: 34px;
 	background: url(/images/logo.svg);
-	background-size: contain;
 	text-indent: -9999px;
 	-webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
 		-moz-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4);
@@ -92,13 +106,26 @@ textarea {
 }
 
 .main-wrapper {
-	padding: 20px;
-	background-color: #fff;
+	padding-bottom: 20px;
+}
+
+.main-content {
+	position: relative;
+}
+
+.main-content:after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: -25px;
+	bottom: 0;
+	border-left: 2px solid #EAA940;
 }
 
 .main-nav {
-	float: left;
+	margin-left: -8px; /* Move to the left the amount of left padding on the li*/
 	clear: both;
+	margin-top: 20px;
 }
 
 .main-nav a{
@@ -108,12 +135,13 @@ textarea {
 .main-nav ul li{
 	display: block;
 	margin-top: 4px;
+	padding: 4px 0px 2px 8px;
+	width: 100%;
 }
 
-.footer-details {
-	position: relative;
-	background: #F9CD4E; /* Gold */
-	border-top: 4px solid #EAA940; /* Burnt */
+.main-nav li:hover{
+	color: #97411B;
+	background-color: #EAA940;
 }
 
 .title {
@@ -132,15 +160,13 @@ textarea {
 }
 	
 .footer-copyright {
-	padding: 10px 20px;
-	background-color: #EAA940; /* Burnt */
+	padding: 10px 0px;
 	clear: both;
 }
 
 .footer-nav {
 	background-color: #EAA940; /* Burnt */
 	clear: both;
-	padding-top: 12px;
 }
 
 .footer-logo {
@@ -166,7 +192,7 @@ nav ul {
 nav ul li {
 	display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
 	margin: 0;
-	line-height: 18px
+	line-height: 18px;
 }
 
 nav a {
@@ -186,9 +212,6 @@ nav a:visited {
 
 nav a:hover {
     text-decoration: none;
-	color: #97411B;
-	border-top: 2px solid #FFF;
-	border-bottom: 2px solid #FFF;
 }
 
 .bottom-contact {
@@ -302,21 +325,19 @@ only screen and (                min-resolution: 2dppx) {
 	font-size: 13px; font-size: 1.3rem;
 	line-height: 17px;
 	letter-spacing: 0.1em;
-	padding-bottom: 6px;
+	margin-bottom: 6px;
 	border-bottom: 2px solid #EAA940; /* Burnt */
 }
 
 	.byline a {
 		text-transform: uppercase;
 		font-family: 'proxima nova';
+		display: block;
 	}
-
-.top-nav {
-	padding: 4px 0px 26px 0px;
-}
 
 .top-nav a{
 	font-size: 14px; font-size: 1.4rem;
+	line-height: 0px;
 }
 	
 .top-nav div{
@@ -353,7 +374,7 @@ only screen and (                min-resolution: 2dppx) {
 	/* Inject background image in HTML */
 	background-size: cover;	
 	background-position: center center;
-	height: 360px;
+	height: 260px;
 	border-bottom: 4px solid #EAA940; /* Burnt */
 	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4) inset;
 }
@@ -376,52 +397,73 @@ a, a:visited  {
 a:hover {
   color: #830B14;
   }
-  
-  
+
+
+ 
 /* ====================
    Media Queries
    ==================== */
+  
 
-@media only screen and (min-width: 600px) {
+
+/* ========================================================================
+    $480 Small Screen & Landscape
+   ======================================================================== */
+ @media only screen and (min-width: 480px) {
+ 
+	.header-wrapper, .main-wrapper{
+		padding-left: 60px; /* width of logo + 16px */
+		padding-right: 40px;
+	}
+
+	.main-nav ul li{
+		width: auto; /* reset */
+		display: inline-block;	
+	} 
+	
+	.logo {
+		height: 349.94px;
+		width: 44px;
+	}
+	
+}
+
+
 
 /* ========================================================================
     $600 Small Screen & Landscape
    ======================================================================== */
-
+@media only screen and (min-width: 600px) {
+   
+   
    .content-wrapper {
 		background-color: #fff;
 	}
    
-	.header-wrapper {
-		padding-left: 74px; /* Move right width of logo + 20px */
+	.header-wrapper, .main-wrapper, .first-footer-wrapper, .second-footer-wrapper {
+		padding-left: 64px; /* Move right width of logo + 20px */
 	}
 	
 	.main-wrapper {
-		padding-left: 30px;
 		padding-right: 30px
-	}
-	
-	.footer-content, .footer-nav, .footer-copyright {
-		padding-left: 30px;
 	}
 	
 	.byline {
 		float: left;
-		border: none; 
+		border: none;
 	}
 	
 	.top-nav {
 		float: right;
 	}
 	
-	.main-nav ul li{
-		display: inline-block;
-		margin-left: 16px; /* Reset */		
-	}
-	
 		.main-nav li:first-child{
 			margin: 0px; /* Reset */		
 		}
+	
+	.slideshow {
+		height: 360px;
+	}
 	
 	.one-column {
 		float: left;
@@ -437,8 +479,6 @@ a:hover {
 	.footer-main-nav ul, .footer-second-nav  ul{
 		text-align: left;
 	}
-	
-
    
     .oldie nav a {
         margin: 0 0.7%;
@@ -477,13 +517,8 @@ a:hover {
 /* ========================================================================
     $768 Large Screen
    ======================================================================== */
-
 @media only screen and (min-width: 768px) {
 
-	body {
-    font-size: 14px; font-size: 1.4rem;
-	line-height: 1.5;
-	}
 
 	.header-wrapper {
 		padding-left: 90px; /* Move right width of logo + 30px */
@@ -540,17 +575,17 @@ a:hover {
     WIDE: Main
    ============ */
 
-    .main article {
+    .main-content article {
         float: left;
-        width: 57%;
+        width: 65%;
     }
 
-    .main aside {
+    .main-content  aside {
         float: right;
         width: 28%;
     }
 	
-	.main img {
+	.main-content  img {
 		width: 100%
 	}
 }
