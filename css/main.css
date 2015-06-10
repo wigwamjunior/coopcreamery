@@ -71,10 +71,10 @@ textarea {
 	background-color: #fff;
 	}
 
-.header-wrapper, .main-wrapper, .first-footer-wrapper, .second-footer-wrapper{
+.header-wrapper, .main-wrapper{
 	padding-left: 50px; /* width of logo + 16px */
 	padding-top: 20px;
-	padding-right: 20px;
+	padding-right: 30px;
 }
 
 .header-wrapper {
@@ -85,12 +85,11 @@ textarea {
 .first-footer-wrapper{
 	background-color: #F9CD4E; /* Gold */
 	border-top: 4px solid #EAA940; /* Burnt */
-	padding: 0px; /* Reset to keep map against right */
 }
 
 .second-footer-wrapper{
 	background-color: #EAA940; /* Gold */
-	padding: 20px; 
+	padding: 30px; 
 }
 	
 .logo {
@@ -107,19 +106,7 @@ textarea {
 
 .main-wrapper {
 	padding-bottom: 20px;
-}
-
-.main-content {
-	position: relative;
-}
-
-.main-content:after {
-	content: " ";
-	position: absolute;
-	top: 0;
-	left: -25px;
-	bottom: 0;
-	border-left: 2px solid #EAA940;
+	margin-top: 40px;
 }
 
 .main-nav {
@@ -134,9 +121,10 @@ textarea {
 
 .main-nav ul li{
 	display: block;
-	margin-top: 4px;
+	margin: 4px, 0px 0px 0px;
 	padding: 4px 0px 2px 8px;
 	width: 100%;
+	vertical-align: top;
 }
 
 .main-nav li:hover{
@@ -148,10 +136,8 @@ textarea {
     color: white;
 }
 
-.main aside {
+.main-content aside {
 	display: none;
-	color: white;
-	background: #830B14; /* Brick */
 }
 
 .one-column {
@@ -161,7 +147,7 @@ textarea {
 	
 .footer-copyright {
 	padding: 10px 0px;
-	clear: both;
+	text-align: center;
 }
 
 .footer-nav {
@@ -192,7 +178,6 @@ nav ul {
 nav ul li {
 	display: inline-block; /* Inline items can't have a height. Set to inline-block */ 
 	margin: 0;
-	line-height: 18px;
 }
 
 nav a {
@@ -219,7 +204,8 @@ nav a:hover {
 	text-align: center;
 	font-size: 20px; font-size: 2.0rem;
 	line-height: 1rem;
-	margin: 18px 0px;
+	margin-top: 28px;
+	margin-bottom: 16px;
 }
 
 .bottom-contact a{
@@ -250,6 +236,7 @@ nav a:hover {
 .hours {
 	font-size: 15px; font-size: 1.5rem;
 	line-height: 18px; line-height: 1.8rem;
+	margin-bottom: 30px;
 }
 
 .hours span{
@@ -269,8 +256,8 @@ nav a:hover {
 	background: url(/images/map.png) center center no-repeat;
 	background-size: cover;
 	box-sizing: border-box;
-	border-left: 1px solid #EAA940; /* Burnt */
-	border-top: 1px solid #EAA940; /* Burnt */
+	border-left: 2px solid #EAA940; /* Burnt */
+	border-top: 2px solid #EAA940; /* Burnt */
 }
 
 @media
@@ -322,7 +309,7 @@ only screen and (                min-resolution: 2dppx) {
 	}
 
 .byline {
-	font-size: 13px; font-size: 1.3rem;
+	font-size: 14px; font-size: 1.4rem;
 	line-height: 17px;
 	letter-spacing: 0.1em;
 	margin-bottom: 6px;
@@ -359,15 +346,9 @@ only screen and (                min-resolution: 2dppx) {
 	content: "";
 	border-right: 2px solid #EAA940;
 	position: absolute;
-	height: 70%;
-	top: 20%;
+	height: 80%;
+	top: 10%;
 	right: -6px;	
-}
-
-.top-nav a:hover {
-    text-decoration: none;
-	color: #97411B;
-	border: none;
 }
 
 .slideshow {
@@ -418,7 +399,9 @@ a:hover {
 
 	.main-nav ul li{
 		width: auto; /* reset */
-		display: inline-block;	
+		display: inline-block;
+		float: left;
+		padding: 0px 6px;
 	} 
 	
 	.logo {
@@ -440,7 +423,7 @@ a:hover {
 		background-color: #fff;
 	}
    
-	.header-wrapper, .main-wrapper, .first-footer-wrapper, .second-footer-wrapper {
+	.header-wrapper, .main-wrapper {
 		padding-left: 64px; /* Move right width of logo + 20px */
 	}
 	
@@ -458,7 +441,7 @@ a:hover {
 	}
 	
 		.main-nav li:first-child{
-			margin: 0px; /* Reset */		
+			margin-top: 4px; /* Reset */		
 		}
 	
 	.slideshow {
@@ -476,6 +459,12 @@ a:hover {
 		width: 44px;
 	}
 	
+	.hours {
+		font-size: 15px; font-size: 1.5rem;
+		line-height: 18px; line-height: 1.8rem;
+		margin: 0px;
+	}
+	
 	.footer-main-nav ul, .footer-second-nav  ul{
 		text-align: left;
 	}
@@ -484,8 +473,8 @@ a:hover {
         margin: 0 0.7%;
     }
 	
-	.footer-main-nav, .footer-second-nav, .footer-details {
-		padding-left: 0px;
+	.first-footer-wrapper{
+		padding-left: 30px;
 	}
 	
 	.footer-logo {
@@ -495,7 +484,11 @@ a:hover {
 	.map-canvas {
 		margin-top: 0px; /* Reset */
 		border-top: none;
-	}	
+	}
+	
+	.copyright {
+		float: left;
+	}
 	
 	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -520,7 +513,7 @@ a:hover {
 @media only screen and (min-width: 768px) {
 
 
-	.header-wrapper {
+	.header-wrapper, .main-wrapper {
 		padding-left: 90px; /* Move right width of logo + 30px */
 	}
 
@@ -529,9 +522,8 @@ a:hover {
 		width: 60px;
 	}
 	
-	.byline {
-		width: auto;
-		clear: none;
+	.byline a{
+		display: inline-block;
 	}
 	
 	.main-nav {
@@ -552,10 +544,29 @@ a:hover {
 		}
 	}
 	
-	.main aside {
+	.main-content aside {
+		display: block;
+		position: relative;
+		font-size: 14px; font-size: 1.4rem;
+		color: #EAA940; /* Burnt */
+	}
+	
+	.main-content aside>img {
 		display: block;
 	}
 	
+	.main-content aside:after {
+		content: " ";
+		position: absolute;
+		top: 0;
+		left: -20px;
+		bottom: 0;
+		border-left: 2px solid #EAA940;
+	}
+	
+	.main-content aside>img {
+		margin-bottom: 20px;
+	}
 		
 /* ====================
     WIDE: CSS3 Effects
@@ -600,7 +611,7 @@ a:hover {
 		background: url(/images/pattern.png) top left rgb(62,61,70); /* Initiate pattern */
 	}
 
-	.header-wrapper {
+	.header-wrapper, .main-wrapper {
 		padding-left: 49px; /* Reset to base padding */
 	}
 	
@@ -648,13 +659,17 @@ p {font-family: "adobe-caslon-pro";}
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova";
   letter-spacing: 0.2em;
-  margin-top: 0;
+  margin-top: 4rem;
   margin-bottom: 1rem;
   font-weight: 300;
   text-transform: uppercase;
   color: #CE7F2B; /* Orange */
 }
-  
+
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0px;
+}
+
 h1 { font-size: 40px; font-size: 4.0rem; line-height: 1.1;  letter-spacing: -.1rem;}
 h2 { font-size: 26px; font-size: 2.6rem; line-height: 1; letter-spacing: .1rem; }
 h3 { font-size: 20px; font-size: 2.0rem; line-height: 1;  letter-spacing: .1rem; }
