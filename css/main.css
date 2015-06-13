@@ -62,11 +62,6 @@ textarea {
     ALL: 
    =================== */
   
-/*.page-background {
-	background: url(/images/radials.png) no-repeat;
-	background-size: 392px 986px;
-}*/
-  
 .container {
 	position: relative;
 	max-width: 1020px;
@@ -117,9 +112,10 @@ textarea {
 
 .logo {
 	background: url(/images/logo-h.png) center center no-repeat;
-	background-size: 690px 93px;
+	background-size: contain;
 	text-indent: -9999px;
-	width: 690px;
+	max-width: 690px;
+	width: 90%;
 	height: 93px;
 	margin: 70px auto;
 }
@@ -215,28 +211,29 @@ nav a:hover {
 
 .nav-bar {
 	background-color: #fff; 
-	margin: 0px;
-	padding: 12px 20px;
+	padding: 12px 20px 0px 20px;
+	z-index: 3;
 	position: relative;
 }
 
-.left-nav {
-	float: left;
-	position: absolute;
-	z-index: 3;
+.left-nav, .right-nav {
+	text-align: center;
+}
+
+.right-nav {
+	margin-bottom: 12px;
 }
 
 .left-nav a{
 	font-size: 16px; font-size: 1.6rem;
-	
+
 }
 
 .left-nav ul li{
 	display: inline-block;
 	margin: 0;
-	padding: 6px 8px 0px 8px;
-	vertical-align: center;
-	
+	padding: 6px 8px 6px 8px;
+	vertical-align: top;
 }
 
 	.left-nav li:first-child{
@@ -247,12 +244,6 @@ nav a:hover {
 .left-nav li:hover{
 	color: #FFF; /* Cherrywood */	
 	background-color: #97411B;
-	height: 38px;
-	
-}
-
-.right-nav {
-	float: right;
 }
 
 .right-nav a{
@@ -399,16 +390,6 @@ only screen and (                min-resolution: 2dppx) {
 	border-top: 8px solid #97411B; /* Cherrywood */
 }
 
-	.slideshow:after {
-		content: "";
-		position: absolute;
-		background: url(/images/wordart.png) center center no-repeat;
-		top: 0;
-		right: 0;
-		height: 412px;
-		width: 153px;
-	}
-
 .present {
 	/* Inject background image in HTML */
 	position: relative;
@@ -468,9 +449,19 @@ a:hover {
    ======================================================================== */
 @media only screen and (min-width: 620px) {
       
+
+	
 	.slideshow:after {
+		content: "";
+		position: absolute;
+		display: block;
+		background: url(/images/wordart.png) center center no-repeat;
+		top: 0;
 		right: 0;
+		height: 412px;
+		width: 153px;
 	}
+	
 	
 	.hours {
 		font-size: 15px; font-size: 1.5rem;
@@ -486,6 +477,10 @@ a:hover {
 	
 	.contact-address {
 		margin-left: 0%;
+	}
+	
+	.details{
+		text-align: left;
 	}
 	
 	.footer-left-nav ul, .footer-second-nav  ul{
@@ -586,6 +581,17 @@ margin-left: 0; }
 
 .offset-by-one-half.column,
 .offset-by-one-half.columns     { margin-left: 52%; }
+	
+	
+	.left-nav {
+		float: left;
+	}
+	
+	
+	.right-nav {
+		margin: 0; /* Reset */
+		float: right;
+	}
 	
 	
 	.slideshow:after {
