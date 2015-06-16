@@ -61,7 +61,12 @@ textarea {
 /* ===================
     ALL: 
    =================== */
-  
+
+.page-wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
 .container {
 	position: relative;
 	max-width: 1020px;
@@ -77,17 +82,12 @@ textarea {
   padding: 0px 20px;
 }
 
-.content-area {
-	position: relative;
-	z-index: 1;
+.main {
+	box-shadow: 0px 0px 10px #777;
 } 
 
 .footer {
 	 background-color: #b67a5f;
-}
-
-.shadow {
-	box-shadow: 0px 0px 10px #777;
 }
 
 .logo {
@@ -573,8 +573,6 @@ margin-left: 0; }
     WIDE: Main
    ============ */
 
-
-	
 	.copy-content  img {
 		width: 100%
 	}
@@ -586,29 +584,14 @@ margin-left: 0; }
     Maximal Width
    =============== */
 	
-	.content-area:before {
-		content: "";
-		background-image: url(/images/radials.png);
-		background-size: 392px 986px;
-		position: absolute;
-		height: 986px;
-		width: 392px;
-		left: -196px;
-		top: 30px;
-		z-index: -1;
+	.background {
+		background: transparent url('/images/radials.png') center 330px no-repeat;
+		background-size: 1332px 828px;
+		background-attachment: scroll;
+		position: fixed;		
+		bottom: 0;
 	}
-	
-	.content-area:after {
-		content: "";
-		background-image: url(/images/radials.png);
-		background-size: 392px 986px;
-		position: absolute;
-		height: 986px;
-		width: 392px;
-		right: -196px;
-		top: 90px;
-		z-index: -1;
-	}
+
 	
 
 	
