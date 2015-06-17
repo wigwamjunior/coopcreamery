@@ -1,0 +1,2 @@
+background-color: #fffcf2; /* pale ivory */
+background-color: #b67a5f; /* pale cherrywood */
