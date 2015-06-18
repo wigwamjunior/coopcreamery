@@ -10,6 +10,8 @@ body {
 	line-height: 1.5;
 	font-weight: 400;
 	font-family: "adobe-caslon-pro", "proxima-nova", Arial, sans-serif;
+	background-color: #fffcf2;
+	background: url(/images/bkgrnd.png);
 }
 
 ::-moz-selection {
@@ -64,6 +66,8 @@ textarea {
 
 .page-wrapper {
 	position: relative;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 .page-header {
@@ -72,8 +76,7 @@ textarea {
 
 .container {
 	position: relative;
-	max-width: 960px;
-	margin: 0 auto;
+	padding: 0 20px;
 	box-sizing: border-box;
 	}
 
@@ -82,26 +85,29 @@ textarea {
   width: 100%;
   float: left;
   box-sizing: border-box;
-  padding: 0px 20px;
 }
 
-.main {
+.content-wrapper {
+	background-color: #fff;
 	-moz-box-shadow: 0 0 40px rgba(0,0,0,0.15);
 		-webkit-box-shadow: 0 0 40px rgba(0,0,0,0.15);
 			box-shadow: 0 0 40px rgba(0,0,0,0.15);
 } 
 
-.footer {
-	 background-color: #b67a5f;
+.site-nav--bottom {
+	background-color: #97411B; /* Cherrywood */	
 }
 
-.logo {
+.site-nav__home {
+	text-align: center;
+}
+
+.site-logo {
 	background: url(/images/logoh.svg) no-repeat;
 	max-width: 300px;
 	width: 90%;
 	height: 23.485px;
 	margin: 50px auto;
-	display: block;
 }
 
 .address-hours {
@@ -148,31 +154,23 @@ textarea {
 }
 
 .details{
-	background-color: #fbf2db; /* Medium tan */
 	text-align: center;
 }
 
-.copyright-footer {
-	background-color: #b67a5f; /* Light Brick */
-	padding: 10px 0;
-}
-
 .copyright {
+	background-color: #97411B; /* Cherrywood */	
+	padding: 10px 0;
 	text-align: center;
 	color: #fff;
 	font-size: 12px; font-size: 1.2rem;
 	padding-top: 10px;
 }
 
-.footer-logo {
-	text-align: center;
-}
-
 .title {
     color: white;
 }
 
-.footer-nav {
+.site-nav__list.bottom {
 	position: relative;
 	font-family: proxima-nova; 
 	letter-spacing: 0.1em;
@@ -183,15 +181,14 @@ textarea {
 }
 
 
-
 /* ==============
     Navigation
    ============== */
 
-.header-nav {
+.site-nav__header {
 	position: relative;
 	margin: 0 auto;
-	text-align: center;
+	background-color: #97411B; /* Cherrywood */	
 }
 
 .site-nav__list {
@@ -214,17 +211,18 @@ textarea {
 
 .connect  {
 	display: none;
-}
-
-.site-nav__item a:hover{
-	background-color: #b67a5f;  /* pale cherrywood */
-	color: #fffcf2; /* pale ivory */
+	float: right;
 }
 
 .site-nav__item a, .site-nav__item a:visited{
 	color: #fff;
 	display: block;
-	padding: 10px 8px;
+	padding: 10px 16px;
+}
+
+.site-nav__item a:hover{
+	background-color: #b67a5f;  /* pale cherrywood */
+	color: #fffcf2; /* pale ivory */
 }
 
 .bottom-contact {
@@ -305,29 +303,127 @@ only screen and (                min-resolution: 2dppx) {
 	position: absolute;
 	height: 48px;
 	width: 48px;
-	background: url(/images/marker.png) top left no-repeat;
+	background: url('/images/marker.png') top left no-repeat;
 	background-size: 48px 48px;
 	left: 43%;
 	top: 39%;
 }
 
 .slideshow {
-	background-color: #97411B;
+	background-color: #ac6749; /* medium cherrywood */
 	position: relative;
+}
+
+.slideshow__image {
+	background-color: #97411B;
 	position: relative;
 	background-size: cover;	
 	background-position: center right;
 	height: 450px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.15) inset;
 }
 
-.overlay {
-	position: relative;
+.slideshow__image:after{
+	content: "";
+	position: absolute;
 	background-color: rgba(151, 65, 27, 0.4);
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 450px;
 }
+
+.slideshow__caption {
+	border-top: 20px solid #ac6749;  /* medium cherrywood */
+	border-bottom: 20px solid #ac6749;  /* medium cherrywood */
+	background: url('/images/pattern.png') repeat,
+				#ac6749; /* medium cherrywood */
+	padding: 20px 20px;
+	position: relative;
+}
+
+.slideshow__title {
+	position: relative;
+	float: left;
+	width: 32%;
+	color: #fff;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-align: right;
+	line-height: 1.2em;
+	padding-right: 2%;
+}
+
+	.slideshow__title:after {
+		content: "";
+		border-right: 2px solid #EAA940;
+		position: absolute;
+		height: 80%;
+		top: 10%;
+		right: 0;
+	}
+
+.slideshow__copy {
+	padding: 0 2%;
+	color: #fff;
+	margin-left: 33%;
+	vertical-align: bottom;
+}
+
+.summary {
+	padding: 50px 0;	
+	text-align: center;
+}
+
+.summary__title {
+    text-transform: uppercase;
+	overflow: hidden;
+    text-align: center;
+	padding: 0 20px;
+}
+
+.summary__title:before,
+.summary__title:after {
+    border-top: 2px solid #000;
+    content: "";
+    display: inline-block;
+    height: .1em;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+    margin-bottom: .15em;
+}
+.summary__title:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+.summary__title:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.summary__images {
+	position: relative;
+	text-align: center;
+}
+
+.summary__flank img{
+	margin-top: 40px;
+	width: 100%;
+}
+
+.summary__center{
+	width: 32%;
+	display: inline-block;
+	margin-left: 2%;
+	vertical-align: baseline;
+	text-align: center;
+}
+
+.summary__image:first-child{
+	margin-left: 0;
+}
+*/
 
 .ie7 .title {
 padding-top: 20px;
@@ -361,7 +457,7 @@ a:hover {
    ======================================================================== */
  @media only screen and (min-width: 480px) {
  
-	.logo {
+	.site-logo {
 		background: url(/images/logoh@2x.svg) no-repeat;
 		max-width: 600px;
 		height: 93px;
@@ -416,7 +512,19 @@ a:hover {
 	}
 	
 	.details{
-		text-align: left;
+		padding: 2em 0;
+	}
+	
+	.details__box {
+		text-align: center;
+		border: 2px solid #97411B; /* Cherrywood */
+		padding: 1em;
+	}
+	
+	.details__box {
+		text-align: center;
+		border: 2px solid #97411B; /* Cherrywood */
+		padding: 1em;
 	}
 	
 	.footer-primary-nav ul, .footer-second-nav  ul{
@@ -429,11 +537,9 @@ a:hover {
 	
 	.copyright {
 		text-align: left;
-		float: left;		
 	}
 
 	.footer-logo {
-		text-align: left;
 		float: right
 	}
 	
@@ -596,7 +702,7 @@ margin-left: 0; }
     Maximal Width
    =============== */
 	
-	.background {
+	.page-background {
 		background: transparent url('/images/radials.png') center 330px no-repeat;
 		background-size: 1252px 600px;
 		background-attachment: scroll;
@@ -606,10 +712,6 @@ margin-left: 0; }
 		bottom: 0;
 		left: 0;
 	}
-
-	
-
-	
   
    	@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -634,7 +736,15 @@ margin-left: 0; }
    ========================================================================== */
 
 
-p {font-family: "adobe-caslon-pro";}
+p {
+font-family: "adobe-caslon-pro";
+margin: 1em 0;
+}
+
+p:first-of-type {
+margin-bottom: 1em;
+margin-top: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova";
@@ -642,8 +752,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 4rem;
   margin-bottom: 1rem;
   font-weight: 300;
-  text-transform: uppercase;
-  color: #CE7F2B; /* Orange */
+  color: #97411B; /* Orange */
 }
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
@@ -656,7 +765,6 @@ h3 { font-size: 20px; font-size: 2.0rem; line-height: 1;  letter-spacing: .1rem;
 h4 { font-size: 16px; font-size: 1.6rem; line-height: 1; letter-spacing: .08rem; }
 h5 { font-size: 12px; font-size: 1.2rem; line-height: 1;  letter-spacing: .05rem; }
 h6 { font-size: 10px; font-size: 1rem; line-height: 1;  letter-spacing: 0; }
-
 
 /* ==========================================================================
    Buttons
@@ -755,6 +863,14 @@ input[type="button"]:focus {
     *zoom: 1;
 }
 
+.wrapper {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
 
 /* ==========================================================================
    Webicons by Adam Fairhead at Fairhead Creative http://fairheadcreative.com
