@@ -113,6 +113,7 @@ textarea {
 
 .content-wrapper {
 	background-color: #fffcf2;
+	padding-top: 60px;
 	-moz-box-shadow: 0 0 40px rgba(0,0,0,0.15);
 		-webkit-box-shadow: 0 0 40px rgba(0,0,0,0.15);
 			box-shadow: 0 0 40px rgba(0,0,0,0.15);
@@ -392,72 +393,31 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .milkbottle {
-	padding-top: 60px;
 	background: url('/images/milk-bottle45.png') center center no-repeat;	
 }
 
-.image-nav__list {
+.circles__list {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	margin-bottom: 3em;
 	text-align: center;
-	height: 320px;
-}
-
-.image-nav__item {
-    font-family: proxima-nova; 
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	text-decoration: none;	
-	font-size: 24px; font-size: 1.8em;
-	font-weight: bold;
-	width:33.33334%;
-    height:340px;
-	background-position: center center;
-	background-repeat:  no-repeat;
-	background-size: cover;
-	display: inline-block;
-	position: relative;
-	float: left;
-}
-
-.image-nav__item a, .image-nav__item a:visited {
-	display: block;
-	padding-top: 220px; /* Calculate height of container. Subtract line-height. Add remainder to bottom */
-	padding-bottom: 88px;
-	vertical-align: bottom;
-	line-height: 32px;
-	background: rgba(151,65,27,0.6);
-	color: #fff;
-	text-shadow: 1px 1px 1px 3px #000;
-}
-
-.image-nav__item img {
-    width:100%;
-    vertical-align:top;
-}
-
-.image-nav__item a:hover {
-	color: #fffcf2;
-	background: rgba(151,65,27,0.1);
-	transition: all 0.5s;
-		-webkit-transition: all 0.5s;
-	
 }
 
 .circles__images {
 	display: inline-block;
 	position: relative;
+	border: 4px solid #ac6749;
+	border-radius: 50%;
 	overflow: hidden;
 	box-sizing: border-box;
-	float: left;
 }
-
+/*
 .circles__images:after {
 	position: absolute;
 	content: "";
 	background-color: rgba(151,65,27,0.3);
+	border-radius: 50%;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -469,8 +429,8 @@ only screen and (                min-resolution: 2dppx) {
 
 .circles__images:hover:after {
 	opacity: 1;
-	border: 5px solid black;
 }
+*/
 
 .circles__images-link {
 	content: "";
@@ -481,7 +441,6 @@ only screen and (                min-resolution: 2dppx) {
 
 .circles__images img {
 	max-width: 100%;
-	vertical-align: top;
 }
 
 .circle-offset {
@@ -563,7 +522,16 @@ a:hover {
 	.connect {
 		margin: 0 4em;
 	}
-
+ 
+	.circles__images {
+		display: inline-block;
+		position: relative;
+		border: 4px solid #ac6749;
+		border-radius: 50%;
+		overflow: hidden;
+		box-sizing: border-box;
+		width: 60%;
+	}
  
 }
 
@@ -624,16 +592,7 @@ a:hover {
 		width: 60%;
 	}
 	
-	.circles__images {
-		margin: 0;
-		padding: 0;
-		width: 33.3334%;
-		box-sizing: border-box;
-		display: inline-block;
-		float: left;
-	}
-	
-		.details{
+	.details{
 		padding-bottom: 2em;
 	}
 	
@@ -696,7 +655,12 @@ a:hover {
 		font-size: 16px; font-size: 1.6rem;
 	}
 	
-
+	.page-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		width: 96%;
+	}
 	
 	.column,
 	.columns {
@@ -780,7 +744,7 @@ a:hover {
 
 	.milkbottle {
 		height: 420px;
-		background: url('/images/milk-bottle.png') center center no-repeat;
+		background: url('/images/milk-bottle.png') top center no-repeat;
 	}
 
 	.circles__list {
@@ -788,6 +752,20 @@ a:hover {
 		margin: 0;
 		padding: 0;
 		text-align: center;
+	}
+
+	.circles__images {
+		display: inline-block;
+		width: 31%;
+		border: 4px solid #ac6749;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-left: 2%;
+		box-sizing: border-box;
+	}
+
+	.circles__images:first-of-type {
+		margin-left: 0;
 	}
 
 	.circle-offset {

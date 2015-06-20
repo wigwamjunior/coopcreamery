@@ -75,7 +75,7 @@ textarea {
 
 .container {
 	position: relative;
-	padding: 0 30px;
+	padding: 0 40px;
 	box-sizing: border-box;
 	}
 
@@ -202,14 +202,14 @@ textarea {
     Navigation
    ============== */
 
-.site-nav {
+.site-nav__header {
 	position: relative;
 	margin: 0 auto;
 	background-color: #97411B; /* Cherrywood */
 	text-align: center;
 }
 
-nav ul {
+.site-nav__list, .site-nav--nested__list {
 	font-family: proxima-nova; 
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
@@ -221,39 +221,20 @@ nav ul {
 	vertical-align: top;
 }
 
-.site-nav__item {
+.site-nav__list li, .site-nav--nested__list li {
 	vertical-align: top;
 	font-size: 12px; font-size: .7em;
 	text-align: center;
 	border-top: 1px solid #fffcf2;
 }
 
-.site-nav__item--social {
-	vertical-align: top;
-	padding:0;
-}
-
-.connect {
-	font-size: 12px; font-size: .8em;
-	line-height: 24px;
-	display: inline-block;
-}
-
-.connect  li {
-	display: inline-block;
-}
-
-.connect li:first-child{
-	border-top: none;
-}
-
-.site-nav__item a, .site-nav__item a:visited{
+.site-nav__list li a, .site-nav__item li a:visited{
 	color: #fff;
 	display: block;
 	padding: 10px 16px;
 }
 
-.site-nav__item a:hover{
+.site-nav__list li a:hover{
 	background-color: #b67a5f;  /* pale cherrywood */
 	color: #fffcf2; /* pale ivory */
 }
@@ -262,27 +243,26 @@ nav ul {
 	margin-top: 44%;
 }
 
-.second-level__header {
-	background-color: #fffcf2;
+.site-nav__list--social {
+	vertical-align: top;
+	padding:0;
 }
 
-.second-level__list {
+.site-nav__contact  {
 	display: inline-block;
-	padding-left: 20px;
+	font-size: 12px; font-size: .8em;
+	line-height: 24px;
+	display: inline-block;
+	border-top: none;
 }
 
-.second-level__item{
-	float: left;
+
+.site-nav--nested__header {
+	background-color: #ac6749;
 }
 
-.second-level__item a, .second-level__item a:visited {
-	color: #97411B; /* Cherrywood */
-	padding: 10px 6px;
-}
-
-.second-level__item a:hover{
-	color: #b67a5f;  /* pale cherrywood */
-	background-color: #fffcf2;  /* pale cherrywood */
+.site-nav--nested__list {
+	background-color: #ac6749;
 }
 
 .map-canvas {
@@ -377,115 +357,48 @@ only screen and (                min-resolution: 2dppx) {
 }
 
 .summary {
-	margin-bottom: 50px;	
+	margin: 80px 0 50px;	
 	text-align: center;
 }
 
-.summary__caption {
-	text-transform: uppercase;
-	text-align: center;
-	padding-top: 10px;
-	display: inline-block;
-	border-top: 2px solid #ac6749;
-	border-bottom: 2px solid #ac6749;
-	margin: 3em 0;
+.summary__bottle-caption {
+    text-transform: uppercase;
+	overflow: hidden;
+    text-align: center;
+	padding: 0 20px;
 }
 
-.milkbottle {
-	padding-top: 60px;
-	background: url('/images/milk-bottle45.png') center center no-repeat;	
-}
-
-.image-nav__list {
+.summary__image-list {
 	list-style: none;
+	display: block;
 	margin: 0;
 	padding: 0;
 	margin-bottom: 3em;
-	text-align: center;
-	height: 320px;
-}
-
-.image-nav__item {
-    font-family: proxima-nova; 
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-	text-decoration: none;	
-	font-size: 24px; font-size: 1.8em;
-	font-weight: bold;
-	width:33.33334%;
-    height:340px;
-	background-position: center center;
-	background-repeat:  no-repeat;
-	background-size: cover;
-	display: inline-block;
-	position: relative;
-	float: left;
-}
-
-.image-nav__item a, .image-nav__item a:visited {
-	display: block;
-	padding-top: 220px; /* Calculate height of container. Subtract line-height. Add remainder to bottom */
-	padding-bottom: 88px;
-	vertical-align: bottom;
-	line-height: 32px;
-	background: rgba(151,65,27,0.6);
-	color: #fff;
-	text-shadow: 1px 1px 1px 3px #000;
-}
-
-.image-nav__item img {
-    width:100%;
-    vertical-align:top;
-}
-
-.image-nav__item a:hover {
-	color: #fffcf2;
-	background: rgba(151,65,27,0.1);
-	transition: all 0.5s;
-		-webkit-transition: all 0.5s;
-	
-}
-
-.circles__images {
-	display: inline-block;
-	position: relative;
-	overflow: hidden;
-	box-sizing: border-box;
-	float: left;
-}
-
-.circles__images:after {
-	position: absolute;
-	content: "";
-	background-color: rgba(151,65,27,0.3);
-	left: 0;
-	top: 0;
 	width: 100%;
-	height: 100%;
-	opacity: 0;
-	transition: all 1s;
-		-webkit-transition: all 1s;
+	background: url('/images/milk-bottle45.png') center center no-repeat;	
 }
 
-.circles__images:hover:after {
-	opacity: 1;
-	border: 5px solid black;
-}
-
-.circles__images-link {
-	content: "";
-	background-color: rgba(151,65,27,0.3);
-	border: 5px solid black;
+.summary__image-left,
+.summary__image-right {
+	display: block;
+	width: 220px;
+	border: 4px solid #ac6749;
 	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto;
 }
 
-.circles__images img {
+.summary__image-right {
+	margin-top: 40px;
+}
+
+.summary__overlay-copy {
+	margin-top: 50px;
+}
+
+.summary__image-left img,
+.summary__image-right img {
 	max-width: 100%;
-	vertical-align: top;
-}
-
-.circle-offset {
-	margin: 0;
 }
 
 .summary__title {
@@ -545,25 +458,18 @@ a:hover {
 	.site-nav__list {
 		display: inline-block;
 	}
-	
-	.second-level__list {
-		padding-left: 2%;
-	}
-	
-	.site-nav__item {
+ 
+	.site-nav__list li {
 		float: left;
 		font-size: 16px; font-size: 1em;
 		border: none;
 	}
 	
-	.second-level__item {
-		font-size: 14px; font-size: .8em;
-	}
-	
-	.connect {
+.site-nav__contact  {
 		margin: 0 4em;
 	}
-
+ 
+ 
  
 }
 
@@ -574,14 +480,18 @@ a:hover {
    ======================================================================== */
 @media only screen and (min-width: 620px) {
      
-	.site-nav {
+	.site-nav__header {
 		text-align: left;
 	}
 	
-	.connect {
+	.site-nav__contact  {
 		display: inline-block;
 		float: right;
 		margin-right: 10px;
+	}
+	
+	.connect {
+		
 	}
 		
 	.connect img {
@@ -624,16 +534,13 @@ a:hover {
 		width: 60%;
 	}
 	
-	.circles__images {
-		margin: 0;
-		padding: 0;
-		width: 33.3334%;
-		box-sizing: border-box;
-		display: inline-block;
-		float: left;
+	.summary__image-left,
+	.summary__image-right {
+		width: 300px;
 	}
 	
-		.details{
+	
+	.details{
 		padding-bottom: 2em;
 	}
 	
@@ -696,7 +603,12 @@ a:hover {
 		font-size: 16px; font-size: 1.6rem;
 	}
 	
-
+	.page-wrapper {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		width: 96%;
+	}
 	
 	.column,
 	.columns {
@@ -757,57 +669,73 @@ a:hover {
 		border-right: 2px solid #ac6749;
 	}
 	
-	.connect {
+	.site-nav__contact {
 		float: right;
 		margin-left: 0;
-	}
-	
-
-/*
-	.summary__title:before,
-	.summary__title:after {
-		border-top: 2px solid #ac6749;
-		content: "";
-		display: block;
-		height: .1em;
-		position: relative;
-		vertical-align: middle;
-		width: 90%;
-		left: 5%;
-		margin: .15em 0;
-	}
-*/	
-
-	.milkbottle {
-		height: 420px;
-		background: url('/images/milk-bottle.png') center center no-repeat;
-	}
-
-	.circles__list {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		text-align: center;
-	}
-
-	.circle-offset {
-		margin-left: 30%;
 	}
 	
 	.summary__title {
 		text-transform: uppercase;
 		overflow: hidden;
 		text-align: center;
-		padding: 10px 20px;
-		display: inline-block;
-		border-top: 2px solid;
-		border-bottom: 2px solid;
+		padding: 0 20px;
+		display: block;
 	}
 	
-	.summary__caption {
-		display: none;
+	.summary__title:before,
+	.summary__title:after {
+		border-top: 2px solid #ac6749;
+		content: "";
+		display: inline-block;
+		height: .1em;
+		position: relative;
+		vertical-align: middle;
+		width: 50%;
+		margin-bottom: .15em;
+	}
+	
+	.summary__title:before {
+		right: 0.5em;
+		margin-left: -50%;
+	}
+	.summary__title:after {
+		left: 0.5em;
+		margin-right: -50%;
 	}
 
+	.summary__image-list {
+		list-style: none;
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 3em;
+		width: 100%;
+		background: url('/images/milk-bottle.png') top center no-repeat;
+		height: 380px;
+	}
+
+	.summary__image-left,
+	.summary__image-right {
+		display: inline-block;
+		width: 30%;
+		border: 4px solid #ac6749;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-top: 10%;
+	}
+
+	.summary__image-right {
+		margin-left: 30%;
+	}
+
+	.summary__image-left img,
+	.summary__image-right img {
+		width: 100%;
+	}
+	
+	.summary__overlay-copy {
+		display: none;
+	}
 	
 	.details__box-center {
 		border: none; /* Reset */
@@ -1024,6 +952,7 @@ input[type="button"]:focus {
 
 .webicon {
 	margin: 10px 4px;
+	background-color: #
 }
 
 .webicon:hover > .webicon__backgrnd {
