@@ -111,7 +111,9 @@ textarea {
     padding: 0.2em 0;
 }
 
-
+a, a:visited  {
+  text-decoration: none;
+  }
 
 
 /*====================================*\
@@ -159,15 +161,6 @@ nav ul {
 	list-style: none;
 	overflow: hidden;
 	vertical-align: top;
-}
-
-a, a:visited  {
-  color: #830B14;
-  text-decoration: none;
-  }
-	
-a:hover {
-  color: #830B14;
 }
 
 .uppercase {
@@ -327,8 +320,23 @@ a:hover {
 	text-shadow: 1px 1px 1px rgba(151,65,27,0.1);
 }
 
+.inner-nav__current {
+	position: relative;
+	display: block;
+}
 
-
+.inner-nav__current:before {
+	content: '';
+	position: absolute;
+	display: block;
+	bottom: -6px;
+	left: 0;
+	margin: 0 auto;
+	right: 0;
+	background-image: url('/images/current-page.png');
+	height: 6px;
+	width: 15px;
+}
   
 /*====================================*\
     #PAGE LAYOUT ELEMENTS
@@ -412,6 +420,16 @@ a:hover {
 	padding-bottom: 20px;
 }
 
+article a, a:visited  {
+  color: #97411B;
+  font-weight: bold;
+  text-decoration: none;
+  }
+	
+article a:hover {
+  color: #830B14;
+}
+
 .supplement {
 	position: relative;
 }
@@ -460,6 +478,8 @@ a:hover {
 				#ac6749; /* medium cherrywood */
 	padding: 20px 20px;
 	position: relative;
+	text-align: center;
+	margin-bottom: 120px;
 }
 
 .slideshow__title {
@@ -483,10 +503,6 @@ a:hover {
 	padding: 0;
 	color: #fff;
 	vertical-align: bottom;
-}
-
-.history {
-	margin-top: 140px;
 }
 
 .history__box {
@@ -554,6 +570,34 @@ a:hover {
 	padding-top: 20px;
 }
 
+.map-canvas {
+	display: block;
+	background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=2600+E.+Franklin+Ave.+Minneapolis&zoom=15&scale=1&size=600x600&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x000000%7Clabel:1%7C2600+E.+Franklin+Ave.+Minneapolis);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	
+}
+
+.map-canvas img {
+	max-width: 100%;
+	opacity: 0;
+}
+
+	@media
+		only screen and (-webkit-min-device-pixel-ratio: 2),
+		only screen and (   min--moz-device-pixel-ratio: 2),
+		only screen and (     -o-min-device-pixel-ratio: 2/1),
+		only screen and (        min-device-pixel-ratio: 2),
+		only screen and (                min-resolution: 192dpi),
+		only screen and (                min-resolution: 2dppx) {
+		
+		.map-canvas {
+			background-image: url(http://maps.googleapis.com/maps/api/staticmap?center=2600+E.+Franklin+Ave.+Minneapolis&zoom=15&scale=1&size=600x600&maptype=roadmap&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x000000%7Clabel:1%7C2600+E.+Franklin+Ave.+Minneapolis);
+		}
+
+	}
+	
+	
 
  
 /*====================================*\
@@ -636,35 +680,7 @@ a:hover {
 		display: inline-block;
 	}
 
-	.map-canvas {
-		border-left: 2px solid #EAA940; /* Burnt */
-	}
-	
-	.slideshow__title {
-		position: relative;
-		float: left;
-		width: 32%;
-		margin-top: 1em;
-		margin-bottom: 0;
-		text-align: right;
-		padding-right: 2%;
-	}
 
-		.slideshow__title:after {
-			border: none; /* Reset */
-			border-right: 2px solid #fff;
-			height: 120%;
-			top: -10%;
-			right: 0;
-		}
-
-	.slideshow__copy {
-		float: left;
-		vertical-align: bottom;
-		margin: 0 0 0 2%;
-		width: 60%;
-	}
-	
 	.history__image {
 		position: relative;
 		background: url('/images/from-to.jpg') center center no-repeat;
