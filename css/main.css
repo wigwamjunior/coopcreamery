@@ -148,9 +148,7 @@ ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
   font-size: 90%; }
   
-li {
-  margin-bottom: 1rem; }
-  
+
 nav ul {
 	font-family: proxima-nova; 
 	letter-spacing: 0.1em;
@@ -485,6 +483,10 @@ a:hover {
 	padding: 0;
 	color: #fff;
 	vertical-align: bottom;
+}
+
+.history {
+	margin-top: 140px;
 }
 
 .history__box {
