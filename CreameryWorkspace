@@ -15,5 +15,12 @@
         </Folder>
         <File name="index.html" />
         <File name="Snippets.txt" />
+        <File name="about.html" />
+        <File name="contact.html" />
+        <File name="food.html" />
+        <File name="menu.html" />
+        <File name="ownership.html" />
+        <File name="people.html" />
+        <File name="visit.html" />
     </Project>
 </NotepadPlus>
