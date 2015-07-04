@@ -4,3 +4,9 @@ background-color: #b67a5f; /* light cherrywood */
 #ac6749;  /* medium cherrywood */
 
 #97411B; /* Cherrywood */
+
+rgb(36,78,90);  /* dark blue */
+rgb(140,171,170); /* Blue */
+rgb(153,181,183); /* Lighter Blue */
+
+<link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>

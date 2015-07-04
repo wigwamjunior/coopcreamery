@@ -275,22 +275,15 @@ th {
 html {
     font-size: 62.5%;
     line-height: 1.5;
-	box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
 }
 
 body {
-    font-size: 18px; font-size: 1.8rem;
+    font-size: 16px; font-size: 1.6rem;
+	letter-spacing: 0.07em;
 	line-height: 1.5;
 	font-weight: 400;
-	font-family: "Bitter", "proxima-nova", Arial, sans-serif;
+	font-family: "adobe-caslon-pro", "proxima-nova", Arial, sans-serif;
 	background-color: #fff;
-	color: #444;
 }
 
 ::-moz-selection {
@@ -331,6 +324,7 @@ textarea {
     resize: vertical;
 }
 
+
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -355,7 +349,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
   font-weight: 300;
   color: rgb(140,171,170); /* Blue */
-  clear: both;
 }
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
@@ -370,21 +363,13 @@ h5 { font-size: 14px; font-size: 1.4rem; line-height: 1;  letter-spacing: .05rem
 h6 { font-size: 10px; font-size: 1rem; line-height: 1;  letter-spacing: 0; }
 
 p {
-font-family: "Bitter";
+font-family: "adobe-caslon-pro";
 margin: 1em 0;
-}
-
-dfn,
-cite,
-em,
-i {
-	font-style: italic;
 }
 
 ol ul {
   margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
- }
+  font-size: 90%; }
   
 
 nav ul {
@@ -403,79 +388,7 @@ nav ul {
 	text-transform: uppercase;
 }
 
-blockquote {
-	margin: 0 1.5em;
-}
 
-address {
-	margin: 0 0 1.5em;
-}
-
-pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
-
-abbr,
-acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #fff9c0;
-	text-decoration: none;
-}
-
-big {
-	font-size: 125%;
-}
-
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-}
-
-a {
-	color: rgb(140,171,170); /* Blue */
-	text-decoration: underline;
-}
-
-a:visited {
-	color: rgb(36,78,90);  /* dark blue */
-}
-
-a:hover,
-a:focus,
-a:active {
-	color: rgb(153,181,183); /* Lighter Blue */
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
 
 /*====================================*\
     #GENERAL STRUCTURE 
@@ -536,18 +449,16 @@ a:active {
 
 .site-nav__item {
 	vertical-align: top;
+	font-size: 12px; font-size: .7em;
 	text-align: center;
 	border-top: 1px solid #fffcf2;
 	margin: 0;
-	line-height: 28px;
 }
 
 .site-nav__item a, .site-nav__item a:visited{
 	color: #fff;
 	display: block;
 	padding: 10px 16px;
-	text-decoration: none;
-	
 }
 
 .site-nav__item a:hover{
@@ -743,6 +654,16 @@ a:active {
 	padding-bottom: 20px;
 }
 
+article a, a:visited  {
+  color: rgb(140,171,170); /* Blue */
+  font-weight: bold;
+  text-decoration: none;
+  }
+	
+article a:hover {
+  color: #830B14;
+}
+
 .supplement {
 	position: relative;
 }
@@ -935,6 +856,7 @@ a:active {
 	
 	.site-nav__item {
 		float: left;
+		font-size: 16px; font-size: 1em;
 		border: none;
 	}
 	
@@ -1043,7 +965,11 @@ a:active {
 
 
 @media only screen and (min-width: 768px) {
-		
+	
+	body {
+		font-size: 16px; font-size: 1.6rem;
+	}
+	
 	.column,
 	.columns {
 		margin-left: 2%;
